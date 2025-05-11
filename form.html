@@ -6,8 +6,6 @@
     <title>Lokalna Baza Przepisów</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="prefetch" href="/form" as="document" />
-    <link rel="prefetch" href="/details" as="document" />
   </head>
   <body class="root">
     <header class="header">
@@ -23,11 +21,22 @@
       </ul>
     </nav>
 
-    <main id="root">
-      <input type="text" id="search" placeholder="Szukaj przepisów..." />
-      <div id="recipe-list">
-        <h2>Lista przepisów</h2>
-      </div>
+    <main id="content-form" class="view">
+      <form id="recipe-form">
+        <label for="title">Tytuł:</label>
+        <input type="text" name="title" id="title" required />
+
+        <label for="category">Kategoria:</label>
+        <input type="text" id="category" name="category" required></input>
+
+        <label for="area">Pochodzenie:</label>
+        <input type="text" id="area" name="area" required></input>
+
+        <label for="instructions">Instrukcje:</label>
+        <textarea id="instructions" name="instructions" required></textarea>
+
+        <button type="submit">Dodaj Przepis</button>
+      </form>
     </main>
 
     <script src="bundle.js"></script>

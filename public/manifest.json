@@ -1,0 +1,21 @@
+{
+    "name": "Lokalna Baza Przepisów",
+    "short_name": "Przepisy",
+    "description": "Twoja osobista baza przepisów kulinarnych, dostępna offline.",
+    "icons": [
+        {
+            "src": "icons/192x192.webp",
+            "type": "image/webp",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icons/512x512.webp",
+            "type": "image/webp",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "display": "fullscreen"
+}
