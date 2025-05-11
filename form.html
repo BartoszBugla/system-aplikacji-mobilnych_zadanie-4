@@ -14,9 +14,9 @@
 
     <nav class="navbar">
       <ul>
-        <li><a href="/__BASE_URL__/">Lista przepisów</a></li>
+        <li><a href="/system-aplikacji-mobilnych_zadanie-4/">Lista przepisów</a></li>
         <li>
-          <a href="/__BASE_URL__/form">Dodaj Przepis</a>
+          <a href="/system-aplikacji-mobilnych_zadanie-4/form">Dodaj Przepis</a>
         </li>
       </ul>
     </nav>
@@ -39,12 +39,12 @@
       </form>
     </main>
 
-    <script src="/__BASE_URL__/bundle.js"></script>
+    <script src="/system-aplikacji-mobilnych_zadanie-4/bundle.js"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/__BASE_URL__/sw.js")
+            .register("/system-aplikacji-mobilnych_zadanie-4/sw.js")
             .then((registration) =>
               console.log("Service Worker zarejestrowany:", registration)
             )

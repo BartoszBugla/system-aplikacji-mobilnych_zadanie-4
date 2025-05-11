@@ -76,11 +76,13 @@ export class RecipeList extends StatefulComponent<RecipeListState> {
   render() {
     const element = document.querySelector("#recipe-list");
 
+    console.log("Recipe", this.getState());
+
     const newChildren = this.getState().recipes.map((recipe) => {
       const recipeElement = document.createElement("div");
       recipeElement.className = "recipe";
       recipeElement.innerHTML = `
-       <a href="/__BASE_URL__/details?id=${recipe.id}">
+       <a href="/system-aplikacji-mobilnych_zadanie-4/details?id=${recipe.id}">
         <h2>${recipe.strMeal}</h2>
         <img class="recipe-preview-icon" src="${
           recipe.strMealThumb || "landscape-placeholder.svg"

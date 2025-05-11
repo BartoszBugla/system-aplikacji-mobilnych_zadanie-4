@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lokalna Baza Przepisów</title>
-    <link rel="manifest" href="/__BASE_URL__/manifest.json" />
-    <link rel="stylesheet" href="/__BASE_URL__/style.css" />
+    <link
+      rel="manifest"
+      href="/system-aplikacji-mobilnych_zadanie-4/manifest.json"
+    />
+    <link
+      rel="stylesheet"
+      href="/system-aplikacji-mobilnych_zadanie-4/style.css"
+    />
   </head>
   <body class="root">
     <header class="header">
@@ -14,21 +20,23 @@
 
     <nav class="navbar">
       <ul>
-        <li><a href="/__BASE_URL__/">Lista przepisów</a></li>
         <li>
-          <a href="/__BASE_URL__/form">Dodaj Przepis</a>
+          <a href="/system-aplikacji-mobilnych_zadanie-4/">Lista przepisów</a>
+        </li>
+        <li>
+          <a href="/system-aplikacji-mobilnych_zadanie-4/form">Dodaj Przepis</a>
         </li>
       </ul>
     </nav>
 
     <main id="details" class="view">Details</main>
 
-    <script src="/__BASE_URL__/bundle.js"></script>
+    <script src="/system-aplikacji-mobilnych_zadanie-4/bundle.js"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/__BASE_URL__/sw.js")
+            .register("/system-aplikacji-mobilnych_zadanie-4/sw.js")
             .then((registration) =>
               console.log("Service Worker zarejestrowany:", registration)
             )

@@ -5,13 +5,16 @@ import { RecipeList } from "./components/recipe-list";
 const main = () => {
   const pathname = window.location.pathname;
 
-  if (pathname === "/__BASE_URL__//") {
+  console.log("Pathname", pathname);
+  if (pathname === "/system-aplikacji-mobilnych_zadanie-4/") {
     const recipeList = new RecipeList();
 
     recipeList.render();
-  } else if (pathname.includes("/__BASE_URL__/form")) {
+  } else if (pathname.includes("/system-aplikacji-mobilnych_zadanie-4/form")) {
     new AddRecipeForm();
-  } else if (pathname.includes("/__BASE_URL__/details")) {
+  } else if (
+    pathname.includes("/system-aplikacji-mobilnych_zadanie-4/details")
+  ) {
     new Details();
   }
 };

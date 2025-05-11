@@ -16,7 +16,7 @@ module.exports = {
   entry: "./src/main.ts",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist/system-aplikacji-mobilnych_zadanie-4"),
     clean: true,
   },
   devServer: {
@@ -24,6 +24,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html?$/,
+        use: "raw-loader",
+      },
       {
         test: /\.ts?$/,
         use: "ts-loader",
@@ -35,10 +39,10 @@ module.exports = {
       },
 
       {
-        test: /fileInWhichJQueryIsUndefined\.js$/,
+        test: /\.(ts|html)?$/,
         loader: "string-replace-loader",
         options: {
-          search: "__BASE_URL__",
+          search: "system-aplikacji-mobilnych_zadanie-4",
           replace: "system-aplikacji-mobilnych_zadanie-4",
         },
       },
@@ -58,5 +62,5 @@ module.exports = {
       patterns: [{ from: "public", to: "." }],
     }),
   ].concat(multipleHtmlPlugins),
-  mode: "production",
+  mode: "development",
 };

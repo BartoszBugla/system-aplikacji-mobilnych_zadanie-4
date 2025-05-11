@@ -24,7 +24,9 @@ export class AddRecipeForm {
 
       await addRecipe(recipe);
 
-      window.location.replace("/__BASE_URL__/details?id=" + recipe.id);
+      window.location.replace(
+        "/system-aplikacji-mobilnych_zadanie-4/details?id=" + recipe.id
+      );
 
       form.reset();
     });
