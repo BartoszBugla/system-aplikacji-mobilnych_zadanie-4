@@ -44,4 +44,4 @@ Jakie funkcje zawiera aplikacja, jakie problemy rozwiązuje, jak działa offline
 Używanie gotowych templatek lub frameworków SPA (np. React),
 Generowanie kodu przez chaty AI bez pełnego zrozumienia i modyfikacji,
 Kopiowanie kodu z tutoriali 1:1 bez własnej modyfikacji,
-Brak działającego hostingu – aplikacja musi być dostępna online.
+Brak działającego hostingu – aplikacja musi być dostępna online.s
