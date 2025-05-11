@@ -6,8 +6,8 @@
     <title>Lokalna Baza Przepisów</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="prefetch" href="/form" as="document" />
-    <link rel="prefetch" href="/details" as="document" />
+    <link rel="prefetch" href="form" as="document" />
+    <link rel="prefetch" href="details" as="document" />
   </head>
   <body class="root">
     <header class="header">
@@ -18,7 +18,7 @@
       <ul>
         <li><a href="/">Lista przepisów</a></li>
         <li>
-          <a href="/form">Dodaj Przepis</a>
+          <a href="form">Dodaj Przepis</a>
         </li>
       </ul>
     </nav>
@@ -35,7 +35,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/sw.js")
+            .register("sw.js")
             .then((registration) =>
               console.log("Service Worker zarejestrowany:", registration)
             )

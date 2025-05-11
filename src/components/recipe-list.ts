@@ -80,7 +80,7 @@ export class RecipeList extends StatefulComponent<RecipeListState> {
       const recipeElement = document.createElement("div");
       recipeElement.className = "recipe";
       recipeElement.innerHTML = `
-       <a href="/details?id=${recipe.id}">
+       <a href="details?id=${recipe.id}">
         <h2>${recipe.strMeal}</h2>
         <img class="recipe-preview-icon" src="${
           recipe.strMealThumb || "landscape-placeholder.svg"
