@@ -36,6 +36,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
