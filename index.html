@@ -1,41 +1,7 @@
-<!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lokalna Baza Przepisów</title>
-    <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="prefetch" href="form" as="document" />
-    <link rel="prefetch" href="details" as="document" />
-  <script defer src="bundle.js"></script></head>
-  <body class="root">
-    <header class="header">
-      <h1>Lokalna Baza Przepisów</h1>
-    </header>
-
-    <nav class="navbar">
-      <ul>
-        <li><a href="/">Lista przepisów</a></li>
-        <li>
-          <a href="form">Dodaj Przepis</a>
-        </li>
-      </ul>
-    </nav>
-
-    <main id="root">
-      <input type="text" id="search" placeholder="Szukaj przepisów..." />
-      <div id="recipe-list">
-        <h2>Lista przepisów</h2>
-      </div>
-    </main>
-
-    <script src="bundle.js"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
+<!doctype html><html lang="pl"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Lokalna Baza Przepisów</title><link rel="manifest" href="/__BASE_URL__/manifest.json"/><link rel="stylesheet" href="/__BASE_URL__/style.css"/><link rel="prefetch" href="/__BASE_URL__/form" as="document"/><link rel="prefetch" href="/__BASE_URL__/details" as="document"/><script defer="defer" src="bundle.js"></script></head><body class="root"><header class="header"><h1>Lokalna Baza Przepisów</h1></header><nav class="navbar"><ul><li><a href="/__BASE_URL__/">Lista przepisów</a></li><li><a href="/__BASE_URL__/form">Dodaj Przepis</a></li></ul></nav><main id="root"><input id="search" placeholder="Szukaj przepisów..."/><div id="recipe-list"><h2>Lista przepisów</h2></div></main><script src="/__BASE_URL__/bundle.js"></script><script>if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("sw.js")
+            .register("/__BASE_URL__/sw.js")
             .then((registration) =>
               console.log("Service Worker zarejestrowany:", registration)
             )
@@ -43,7 +9,4 @@
               console.error("Błąd rejestracji Service Worker:", error)
             );
         });
-      }
-    </script>
-  </body>
-</html>
+      }</script></body></html>
