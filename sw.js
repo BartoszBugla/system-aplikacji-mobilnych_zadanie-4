@@ -30,20 +30,24 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   console.log(event.request.url);
 
-  if (event.request.url.includes("/details")) {
+  if (
+    event.request.url.includes("/system-aplikacji-mobilnych_zadanie-4/details")
+  ) {
     event.respondWith(
       caches.open(CACHE_NAME).then((cache) => {
-        return cache.match("/details").then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
+        return cache
+          .match("/system-aplikacji-mobilnych_zadanie-4/details")
+          .then((cachedResponse) => {
+            if (cachedResponse) {
+              return cachedResponse;
+            }
 
-          return fetch(event.request).then((fetchedResponse) => {
-            cache.put(event.request, fetchedResponse.clone());
+            return fetch(event.request).then((fetchedResponse) => {
+              cache.put(event.request, fetchedResponse.clone());
 
-            return fetchedResponse;
+              return fetchedResponse;
+            });
           });
-        });
       })
     );
 
