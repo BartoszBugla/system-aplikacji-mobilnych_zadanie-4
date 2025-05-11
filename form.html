@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lokalna Baza Przepisów</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="root">
+    <header class="header">
+      <h1>Lokalna Baza Przepisów</h1>
+    </header>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">Lista przepisów</a></li>
+        <li>
+          <a href="/form">Dodaj Przepis</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="content-form" class="view">
+      <form id="recipe-form">
+        <label for="title">Tytuł:</label>
+        <input type="text" name="title" id="title" required />
+
+        <label for="category">Kategoria:</label>
+        <input type="text" id="category" name="category" required></input>
+
+        <label for="area">Pochodzenie:</label>
+        <input type="text" id="area" name="area" required></input>
+
+        <label for="instructions">Instrukcje:</label>
+        <textarea id="instructions" name="instructions" required></textarea>
+
+        <button type="submit">Dodaj Przepis</button>
+      </form>
+    </main>
+
+    <script src="bundle.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) =>
+              console.log("Service Worker zarejestrowany:", registration)
+            )
+            .catch((error) =>
+              console.error("Błąd rejestracji Service Worker:", error)
+            );
+        });
+      }
+    </script>
+  </body>
+</html>
