@@ -24,7 +24,7 @@ export class AddRecipeForm {
 
       await addRecipe(recipe);
 
-      window.location.replace("/details?id=" + recipe.id);
+      window.location.replace("/__BASE_URL__/details?id=" + recipe.id);
 
       form.reset();
     });

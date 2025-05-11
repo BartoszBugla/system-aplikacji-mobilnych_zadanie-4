@@ -33,6 +33,15 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+
+      {
+        test: /fileInWhichJQueryIsUndefined\.js$/,
+        loader: "string-replace-loader",
+        options: {
+          search: "__BASE_URL__",
+          replace: "system-aplikacji-mobilnych_zadanie-4",
+        },
+      },
     ],
   },
   resolve: {
@@ -49,5 +58,5 @@ module.exports = {
       patterns: [{ from: "public", to: "." }],
     }),
   ].concat(multipleHtmlPlugins),
-  mode: "development",
+  mode: "production",
 };

@@ -64,6 +64,8 @@ export const getAllMeals = async (search: string) => {
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
     );
 
+    console.log("Response from API:", response);
+
     const data: MealResponse = await response.json();
 
     if (!data?.meals) throw new Error("No meals found");
