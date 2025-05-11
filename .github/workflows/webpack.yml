@@ -40,10 +40,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: production-files
-          path: ./dist/system-aplikacji-mobilnych_zadanie-4
+          path: ./dist
 
-      - name: Move files
-        run: mv ./dist/system-aplikacji-mobilnych_zadanie-4/* ./dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
