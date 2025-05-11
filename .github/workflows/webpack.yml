@@ -36,10 +36,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v2
         with:
-          ref: main
+          lfs: true
+          token: ${{ secrets.ACCESS_TOKEN }}
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -49,5 +49,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./dist
