@@ -4,18 +4,29 @@
     "description": "Twoja osobista baza przepisów kulinarnych, dostępna offline.",
     "icons": [
         {
-            "src": "icons/192x192.webp",
-            "type": "image/webp",
-            "sizes": "192x192"
+            "src": "icons/192x192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any"
         },
         {
-            "src": "icons/512x512.webp",
-            "type": "image/webp",
-            "sizes": "512x512"
+            "src": "icons/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
         }
     ],
     "start_url": "/",
     "background_color": "#ffffff",
     "theme_color": "#007bff",
-    "display": "fullscreen"
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "lang": "pl-PL",
+    "categories": [
+        "food",
+        "recipes",
+        "cooking"
+    ],
+    "dir": "ltr",
+    "scope": "/"
 }
